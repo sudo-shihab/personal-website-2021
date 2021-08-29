@@ -1,0 +1,17 @@
+{
+  "name": "shihab-dev-portfolio-2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve:dev": "live-server ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jsdoc": "^3.6.7",
+    "live-server": "^1.2.1"
+  }
+}

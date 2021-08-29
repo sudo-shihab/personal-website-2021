@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>project</title>
+    <!-- critical css-->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            height: 100%;
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        body {
+            min-height: 100%;
+            position: relative;
+        }
+
+        header.primary--header {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            background: #ddd;
+        }
+
+        footer.primary--footer {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            padding: 10px;
+            background: #ccc;
+        }
+
+        .modal {
+            z-index: 9999;
+        }
+
+        .modal .modal--overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            z-index: 9999;
+            background: #fff;
+        }
+
+        .modal .modal-body {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -100%);
+        }
+
+        .loader.loader--splash {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            /* Safari */
+            animation: spin 2s linear infinite;
+            transition: all 2s linear;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./src/styles/app.css">
+
+</head>
+
+<body>
+    <main>
+        <!-- Splash Screen fixed Modal-->
+        <section class="splash-screen" id="splash-section">
+            <div class="modal modal--splash">
+                <div class="modal--overlay modal--overlay__splash" id="modal-overlay">
+                    <div class="modal-body">
+                        <div class="loader loader--splash" id="splash-screen-loader"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- APP Section-->
+        <section class="app-wrapper">
+            <div id="app"></div>
+        </section>
+    </main>
+    <script src="./src/entry.js" type="module" defer></script>
+</body>
+
+</html>
