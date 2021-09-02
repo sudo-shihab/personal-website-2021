@@ -8,11 +8,13 @@ export class SplashScreen {
   }
 
   retract() {
-    this.$splashScreenOverlayEl.classList.toggle("gradual-decedent", true);
+    setTimeout(() => {
+      this.$splashScreenOverlayEl.classList.toggle("gradual-decedent", true);
+    }, 1000);
 
     setTimeout(() => {
       this.$splashScreenLoader.classList.toggle("hide");
       this.$splashComponent.classList.toggle("hide");
-    }, 1000);
+    }, 1500);
   }
 }

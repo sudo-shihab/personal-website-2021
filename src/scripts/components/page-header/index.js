@@ -6,6 +6,7 @@ export class PrimaryHeader {
   }
   render() {
     const template = primaryHeader.getPrimaryTemplate();
+    console.log("template for head is", template);
     this.appendToEl.insertAdjacentHTML("afterBegin", template);
   }
 }
