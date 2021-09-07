@@ -2,7 +2,9 @@ import { PrimaryHeader } from "./components/page-header/index.js";
 import { PageFooterComponent } from "./components/page-footer/index.js";
 import { SplashScreen } from "./components/splash-screen/index.js";
 import { BaseStackLayout } from "./layouts/base-stack-layout/index.js";
+import { FloatingContact } from "./components/floating-contact/index.js";
 import AppViews from "./views/index.js";
+import { globalConfig } from "./configs/config.js";
 
 export default () => {
   // Splash screen component
@@ -19,10 +21,14 @@ export default () => {
   const homePageLayout = new BaseStackLayout($appEl);
   homePageLayout.render();
 
-  // load all views here
+  // inject floating contact component
+  const $floatingElHolder = document.getElementById("floating-elements-holder");
+  new FloatingContact($floatingElHolder, globalConfig).render();
+
+  // load all view [ logical routes ] here
   AppViews.load();
 
   // footer component
   const homeFooter = new PageFooterComponent($bodyEl);
-  homeFooter.render();
+  // homeFooter.render();
 };

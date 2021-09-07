@@ -6,11 +6,9 @@ export const primaryHeader = {
                 <img src="./src/images/logo.png" class="responsive">
             </div>
             <nav>
-                <ul>
-                    <li class="mono-font">01. About</li>
-                    <li class="mono-font">02. Resume</li>
-                    <li class="mono-font">03. Works</li>
-                    <li class="mono-font">04. About</li>
+                <ul id="menu"></ul>
+                <ul class="hide" id="mobile-menu">
+                    <li>Shihab</li>
                 </ul>
             </nav>
         </header>`;
