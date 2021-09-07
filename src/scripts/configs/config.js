@@ -3,8 +3,14 @@ export const globalConfig = {
 };
 
 export const introView = {
-  devName: "Shihab PMS",
+  intro: "Tell me here",
+  devName: "Shihab PM",
   leadingText: "I build things for the web",
   description:
-    "Shihab I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products at",
+    "I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products at",
+  primaryCTATxt: "Check Out My Works",
+};
+
+export const commonView = {
+  userEmailID: "shihab.pm.dev@gmail.com",
 };

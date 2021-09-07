@@ -1,40 +1,45 @@
-/* playfair-display-regular - latin */
+/* fira-mono-regular - latin */
 @font-face {
-  font-family: "Playfair Display";
+  font-family: "Fira Mono";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/playfair-display-v22-latin-regular.eot"); /* IE9 Compat Modes */
-  src: local("Playfair Display"), local("Playfair-Display"),
-    url("../fonts/playfair-display-v22-latin-regular.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/playfair-display-v22-latin-regular.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../fonts/playfair-display-v22-latin-regular.woff") format("woff"),
-    /* Modern Browsers */ url("../fonts/playfair-display-v22-latin-regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/playfair-display-v22-latin-regular.svg#PlayfairDisplay")
-      format("svg"); /* Legacy iOS */
-}
-
-/* nunito-regular - latin */
-@font-face {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/nunito-v16-latin-regular.eot"); /* IE9 Compat Modes */
   src: local(""),
-    url("../fonts/nunito-v16-latin-regular.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/nunito-v16-latin-regular.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("../fonts/nunito-v16-latin-regular.woff")
-      format("woff"),
-    /* Modern Browsers */ url("../fonts/nunito-v16-latin-regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/nunito-v16-latin-regular.svg#Nunito") format("svg"); /* Legacy iOS */
+    url("../fonts/fira-mono/fira-mono-v9-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/fira-mono/fira-mono-v9-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+/* inter-regular - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/inter/inter-v3-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/inter/inter-v3-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* inter-600 - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../fonts/inter/inter-v3-latin-600.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/inter/inter-v3-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* inter-900 - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: local(""), url("../fonts/inter/inter-v3-latin-900.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/inter/inter-v3-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/*  
+   @author : shihab PM 
+  description : MOBILE FIRST APPROACH APPLIES TILL THE SCREEN SIZE OF 600PX
+*/
 
 :root {
   /*  colors */
@@ -44,14 +49,58 @@
   --text-lighter: #ccc;
   --text-lightest: #fff;
   --text-dark: #444;
-  --font-size-default-xl: 16px;
+  --radium-green: #64ffb7;
+
+  --font-sans: "Inter", sans-serif, -apple-system, system-ui;
+  --font-mono: "Fira Mono", "Roboto Mono", monospace;
+
+  --font-size-base-sm: 1rem; /*base 12px */
+  --font-size-base-md: 1.167; /* 14px */
+  --font-size-base-xl: 1.333; /* 16px */
+  --font-size-hero-sm: 3.33333rem; /* 40px */
+  --font-size-hero-md: 3.33333rem; /* 40px */
+
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-boldest: 900;
+
+  /*Line heights*/
+  --app-lh-sm: 1.4;
+  --app-lh-md: 1.5;
+  --app-lh-lg: 1.7;
+  --app-lh-xl: 1.8;
+  --app-lh-xxl: 2;
+
+  /* margins */
+  --margin-sm: 10px;
+  --margin-md: 20px;
+  --margin-xxl: 50px;
+
   /* conatiner vars */
-  --container-md: 2rem;
+  --container-md: 1.5625rem;
 
   /* app level vars */
-  --bg-color-primary: var(--navy-blue);
-  --fnt-primary-color: var(--text-lighter);
-  --container-padding: var(--container-md);
+  --app-bg-color-primary: var(--navy-blue);
+  --app-text-primary-color: var(--text-lighter);
+  --app-primary-font: var(--font-sans);
+  --app-secondary-font: var(--font-mono);
+  --app-radium-color: var(--radium-green);
+
+  --app-fsz-xxs: 1rem; /* 12px */
+  --app-fsz-xs: 1.083rem; /* 13px */
+  --app-fsz-sm: 1.167rem; /* 14px*/
+  --app-fsz-md: 1.333rem; /* 16px */
+  --app-fsz-lg: 1.5rem; /* 18px */
+  --app-fsz-xl: 1.667rem; /* 20px */
+  --app-fsz-xxl: 1.833rem; /* 22px */
+  --app-fsz-xxxl: 2rem; /* 24px*/
+  --app-fsz-heading: 2.667; /* 32px */
 }
 
 /* Reset */
@@ -59,7 +108,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
   scrollbar-width: thin;
   scrollbar-color: #444 0f1d31;
 }
@@ -73,20 +121,16 @@ html {
   height: 100%;
   background: #fff;
   overflow-x: hidden;
-  font-size: var(--font-size-default-xl);
-}
-@media only screen and (max-width: 600px) {
-  html {
-    font-size: 12px;
-  }
+  font-size: 12px;
 }
 
 body {
   min-height: 100%;
   position: relative;
   overflow-x: hidden;
-  background: var(--bg-color-primary);
-  color: var(--fnt-primary-color);
+  background: var(--app-bg-color-primary);
+  color: var(--app-text-primary-color);
+  font-family: var(--app-primary-font);
 }
 
 /* Works on Firefox */
@@ -114,7 +158,7 @@ footer.primary--footer {
   bottom: 0px;
   width: 100%;
   padding: 10px;
-  background: #ccc;
+  background: transparent;
 }
 
 .modal {
@@ -127,7 +171,7 @@ footer.primary--footer {
   height: 100%;
   top: 0px;
   z-index: 9999;
-  background: var(--bg-color-primary);
+  background: var(--app-bg-color-primary);
   display: grid;
   align-items: center;
   justify-content: center;
@@ -189,13 +233,55 @@ footer.primary--footer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 0 var(--container-padding);
 }
 /* Critical CSS Ends here */
 
 /*
 * ================== UTILITY CSS ======
 */
+
+.app-lh-sm {
+  line-height: var(--app-lh-sm);
+}
+.app-lh-md {
+  line-height: var(--app-lh-md);
+}
+.app-lh-lg {
+  line-height: var(--app-lh-lg);
+}
+.app-lh-xl {
+  line-height: var(--app-lh-xl);
+}
+.app-lh-xxl {
+  line-height: var(--app-lh-xxl);
+}
+.text-xxs {
+  font-size: var(--app-fsz-xxs);
+}
+.text-xs {
+  font-size: var(--app-fsz-xs);
+}
+.text-sm {
+  font-size: var(--app-fsz-sm);
+}
+.text-md {
+  font-size: var(--app-fsz-md);
+}
+.text-lg {
+  font-size: var(--app-fsz-lg);
+}
+.text-xl {
+  font-size: var(--app-fsz-xl);
+}
+.text-xxl {
+  font-size: var(--app-fsz-xxl);
+}
+.text-xxxl {
+  font-size: var(--app-fsz-xxxl);
+}
+.text-heading {
+  font-size: var(--app-fsz-heading);
+}
 .hide {
   display: none;
   opacity: 0;
@@ -210,13 +296,56 @@ img.responsive {
   display: block;
   max-width: 100%;
 }
+.app-position-rel {
+  position: relative;
+}
+
+.primary-padding-allround {
+  padding: clamp(20px, 3vw, 30px) clamp(25px, 4vw, 40px);
+}
+
+.primary-padding-unblock {
+  /* padding: 0 clamp(25px, 4vw, 40px); */
+  padding: 0 clamp(20px, 8vw, 100px);
+}
+
+.hero-text {
+  font-size: clamp(40px, 9vw, 90px);
+}
+
+.margin-top-sm {
+  margin-top: var(--margin-sm);
+}
+.margin-top-md {
+  margin-top: var(--margin-md);
+}
+.margin-top-xxl {
+  margin-top: var(--margin-xxl);
+}
+
+.mono-font {
+  font-family: var(--app-secondary-font);
+}
+.sans-font {
+  font-family: var(--app-primary-font);
+}
+
+.btn.btn-primary {
+  color: var(--app-radium-color);
+  background: transparent;
+  padding: 14px 20px;
+  border-radius: 4px;
+  border: 1px solid var(--app-radium-color);
+}
+
+.text-radium {
+  color: var(--app-radium-color);
+}
 
 /*
 * ================== UTILITY CSS / ENDS -->
 */
-.app-position-rel {
-  position: relative;
-}
+
 /* ======  HEADER COMPONENT CSS ========= */
 
 header {
@@ -225,7 +354,7 @@ header {
   align-items: center;
   position: fixed;
   width: 100%;
-  padding: var(--container-padding);
+  background-color: rgba(10, 25, 47, 0.85);
 }
 
 header > nav ul {
@@ -239,6 +368,10 @@ header > nav ul > li {
   margin-left: 15px;
 }
 
+/* Info Card component */
+.hero__section-description {
+  max-width: 550px;
+}
 /* Page LAyout Css*/
 .section {
   display: flex;
@@ -248,10 +381,22 @@ header > nav ul > li {
   justify-content: center;
 }
 
-/* Intro section */
-/* #intro h1 {
-  font-size: 5rem;
+/* Email Component */
+.email__component {
+  writing-mode: vertical-lr;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
-#intro h3 {
-  font-size: 2.5rem;
-} */
+.email__component::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100px;
+  margin-top: 10px;
+  background: rgb(255, 255, 255);
+  left: 50%;
+  transform: translateX(-50%);
+}

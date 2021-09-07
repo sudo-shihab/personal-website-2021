@@ -1,7 +1,7 @@
 {
   "name": "shihab-dev-portfolio-2021",
   "version": "1.0.0",
-  "description": "",
+  "description": "A portfolio by Shihab PM",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
