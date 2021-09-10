@@ -29,7 +29,7 @@ export default () => {
   // inject floating social buttons component
   const floatingSocialButtonComponent = new SocialButtons(
     $floatingElHolder,
-    {}
+    globalConfig.socialButtons
   );
   floatingSocialButtonComponent.render();
 
