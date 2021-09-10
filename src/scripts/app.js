@@ -3,6 +3,7 @@ import { PageFooterComponent } from "./components/page-footer/index.js";
 import { SplashScreen } from "./components/splash-screen/index.js";
 import { BaseStackLayout } from "./layouts/base-stack-layout/index.js";
 import { FloatingContact } from "./components/floating-contact/index.js";
+import { SocialButtons } from "./components/social-buttons/index.js";
 import AppViews from "./views/index.js";
 import { globalConfig } from "./configs/config.js";
 
@@ -24,6 +25,13 @@ export default () => {
   // inject floating contact component
   const $floatingElHolder = document.getElementById("floating-elements-holder");
   new FloatingContact($floatingElHolder, globalConfig).render();
+
+  // inject floating social buttons component
+  const floatingSocialButtonComponent = new SocialButtons(
+    $floatingElHolder,
+    {}
+  );
+  floatingSocialButtonComponent.render();
 
   // load all view [ logical routes ] here
   AppViews.load();

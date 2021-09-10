@@ -31,6 +31,34 @@ export const globalConfig = {
   ],
 };
 
+export const socialButtons = [
+  {
+    name: "github",
+    iconClass: "logo-github",
+    enroute: "https://github.com/sudo-shihab",
+  },
+  {
+    name: "instagram",
+    iconClass: "logo-instagram",
+    enroute: "https://www.instagram.com/sudo.shihab",
+  },
+  {
+    name: "linkedin",
+    iconClass: "logo-linkedin",
+    enroute: "https://www.linkedin.com/in/shihab-p-m-420647207/",
+  },
+  {
+    name: "twitter",
+    iconClass: "logo-twitter",
+    enroute: "https://www.linkedin.com/in/shihab-p-m-420647207/",
+  },
+  {
+    name: "codepen",
+    iconClass: "logo-codepen",
+    enroute: "https://www.linkedin.com/in/shihab-p-m-420647207/",
+  },
+];
+
 export const introView = {
   intro: "Hello, my name is",
   heading: "Shihab PM",
