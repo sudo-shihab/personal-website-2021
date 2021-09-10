@@ -8,19 +8,25 @@ export const globalConfig = {
       type: "link",
     },
     {
-      name: "Works",
-      link: "/#works",
+      name: "Experience",
+      link: "/#experience",
       type: "link",
     },
     {
-      name: "Github",
-      link: "/#about",
+      name: "Work",
+      link: "/#work",
+      type: "link",
+    },
+    {
+      name: "Contact",
+      link: "/#contact",
       type: "link",
     },
     {
       name: "Resume",
       link: "/#resume",
       type: "button",
+      elID: "resume-cta",
     },
   ],
 };
