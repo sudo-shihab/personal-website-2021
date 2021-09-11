@@ -58,7 +58,8 @@
   --text-lighter: #ccc;
   --text-lightest: #fff;
   --text-dark: #444;
-  --radium-green: #64ffb7;
+  /* --radium-green: #64ffb7;*/
+  --radium-green: #9affd8;
   --chalk: #8892b0;
   --light-chalk: #a8b2d1;
   --lightest-chalk: #ccd6f6;
@@ -114,15 +115,18 @@
   --app-opacity-lg: 0.6;
   --app-opacity-xl: 0.5;
 
-  --app-color-heading: var(--chalk);
+  --app-color-heading: var(--lightest-chalk);
   --app-color-subheading: var(--light-chalk);
-  --app-color-paragraph: var(--lightest-chalk);
+  --app-color-paragraph: var(--chalk);
 
   --app-lh-sm: 1.4;
   --app-lh-md: 1.5;
   --app-lh-lg: 1.7;
   --app-lh-xl: 1.8;
   --app-lh-xxl: 2;
+
+  /* transition */
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .app-color-heading {
   color: var(--app-color-heading);
@@ -133,6 +137,14 @@
 
 .app-color-paragraph {
   color: var(--app-color-paragraph);
+}
+
+.app-fsz-hero {
+  font-size: clamp(40px, 8vw, 80px);
+}
+
+.app-fsz-paragraph {
+  font-size: clamp(13px, 1.6vw, 16px);
 }
 /* Reset */
 * {
@@ -160,7 +172,8 @@ body {
   position: relative;
   overflow-x: hidden;
   background: var(--app-bg-color-primary);
-  color: var(--app-text-primary-color);
+  color: var(--app-color-heading);
+  font-size: var(--app-fsz-xs);
   font-family: var(--app-primary-font);
   counter-reset: li;
 }
@@ -170,10 +183,20 @@ a {
   color: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: var(--app-color-heading);
+}
 a:hover {
   transition: all 0.3s ease-in;
   color: var(--app-radium-color);
 }
+
 /* Works on Firefox */
 
 *::-webkit-scrollbar-track {

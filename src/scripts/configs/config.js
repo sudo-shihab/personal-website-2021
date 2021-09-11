@@ -62,7 +62,10 @@ export const introView = {
   intro: "Hello, my name is",
   heading: "Shihab PM",
   leading: "I build things for the web",
-  description:
-    "I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products at",
+  description: {
+    text: "I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products at",
+    maxWidth: "550px",
+  },
+
   primaryCTATxt: "Check out my works",
 };
