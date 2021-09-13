@@ -6,15 +6,13 @@ export class ImageInfoCard {
     this.insertPosition = insertPosition;
     this.infoObj = infoObj;
   }
-  renderInitialTemplate() {
+
+  render() {
     const templateForComponent = template.getPrimaryTemplate(this.infoObj);
+
     this.contextEl.insertAdjacentHTML(
       this.insertPosition,
       templateForComponent
     );
-  }
-
-  render() {
-    this.renderInitialTemplate();
   }
 }
