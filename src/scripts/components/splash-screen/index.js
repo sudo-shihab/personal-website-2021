@@ -5,6 +5,7 @@ export class SplashScreen {
     );
     this.$splashComponent = document.getElementById("splash-section");
     this.$splashScreenLoader = document.getElementById("splash-screen-loader");
+    this.$rootEl = document.querySelector("html");
   }
 
   retract() {
@@ -15,6 +16,7 @@ export class SplashScreen {
     setTimeout(() => {
       this.$splashScreenLoader.classList.toggle("hide");
       this.$splashComponent.classList.toggle("hide");
+      this.$rootEl.classList.toggle("overflow-hidden");
     }, 1500);
   }
 }

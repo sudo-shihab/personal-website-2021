@@ -4,7 +4,7 @@ export const globalConfig = {
   navMenu: [
     {
       name: "About",
-      link: "/#/",
+      link: "/#about-me",
       type: "link",
     },
     {
@@ -64,7 +64,7 @@ export const introView = {
   leading: "I build things for the web",
   description: {
     text: "I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products at",
-    maxWidth: "550px",
+    maxWidth: "clamp(450px,500px,600px)",
   },
 
   primaryCTATxt: "Check out my works",
