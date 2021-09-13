@@ -135,7 +135,7 @@
 }
 
 .app-h2 {
-  font-size: clamp(20px, 2.6vw, 26px);
+  font-size: clamp(20px, 2.6vw, 24px);
 }
 .app-color-heading {
   color: var(--app-color-heading);
